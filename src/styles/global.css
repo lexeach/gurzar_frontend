@@ -1,0 +1,237 @@
+/* ==========================================================
+   DOMS Enterprise Global Styles
+========================================================== */
+
+/* CSS Reset */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root */
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    "Inter",
+    "Roboto",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Root Container */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Lists */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Tables */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Buttons */
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Inputs */
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  outline: none;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f3f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5cad3;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9aa4b2;
+}
+
+/* Selection */
+
+::selection {
+  background: #1976d2;
+  color: white;
+}
+
+/* Utilities */
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gap-1 {
+  gap: 8px;
+}
+
+.gap-2 {
+  gap: 16px;
+}
+
+.gap-3 {
+  gap: 24px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Page */
+
+.page-container {
+  padding: 24px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.page-subtitle {
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+/* Card */
+
+.card-shadow {
+  box-shadow:
+    0 2px 8px rgba(0,0,0,.08);
+}
+
+.card-rounded {
+  border-radius: 12px;
+}
+
+/* Loading */
+
+.loading-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+/* Responsive */
+
+@media (max-width:768px){
+
+.page-container{
+padding:16px;
+}
+
+.page-title{
+font-size:22px;
+}
+
+}
+
+@media (max-width:480px){
+
+.page-container{
+padding:12px;
+}
+
+.page-title{
+font-size:20px;
+}
+
+}
