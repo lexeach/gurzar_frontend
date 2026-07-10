@@ -641,17 +641,38 @@ const activeFilters = Object.entries(
 /* ===========================================
     Action Settings
 =========================================== */
+const MasterList = ({
 
-showActions = true,
+    /* ===========================================
+        Action Settings
+    ============================================ */
 
-showView = true,
+    showActions = true,
 
-showEdit = true,
+    showView = true,
 
-showDelete = true,
+    showEdit = true,
 
-showDuplicate = false,
+    showDelete = true,
 
-showHistory = false,
+    showDuplicate = false,
 
-customActions = [],
+    showHistory = false,
+
+    customActions = [],
+
+}) => {
+
+    return (
+
+        <div>
+
+            MasterList Component
+
+        </div>
+
+    );
+
+};
+
+export default MasterList;
