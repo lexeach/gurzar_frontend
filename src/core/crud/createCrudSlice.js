@@ -457,6 +457,6 @@ selectors,
 
 };
 
-export default
+export { createCrudSlice };
 
-createCrudSlice;
+export default createCrudSlice;
