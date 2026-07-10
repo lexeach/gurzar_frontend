@@ -9,6 +9,16 @@ import documentReducer from "./slices/documentSlice";
 import notificationReducer from "./slices/notificationSlice";
 import settingsReducer from "./slices/settingsSlice";
 import tehsilReducer from "./slices/tehsilSlice";
+
+import hierarchyCrudReducer from "./slices/hierarchyCrudSlice";
+
+export const store = configureStore({
+  reducer: {
+    hierarchy: hierarchyReducer,
+    hierarchyCrud: hierarchyCrudReducer,
+  },
+});
+
 const store = configureStore({
   reducer: {
     auth: authReducer,
