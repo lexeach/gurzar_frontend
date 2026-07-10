@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 
 import {
-  Notifications,
+  NotificationsIcon,
   Warning,
   Info,
   CheckCircle,
