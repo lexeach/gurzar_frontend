@@ -8,14 +8,21 @@ import PublicRoute from "./routes/PublicRoute";
 
 import MainLayout from "./layouts/MainLayout";
 
-import {
+const Roles = lazy(() =>
+  import("./pages/settings/Roles")
+);
 
-Roles,
-Permissions,
-Masters,
-Configuration,
+const Permissions = lazy(() =>
+  import("./pages/settings/Permissions")
+);
 
-} from "./pages/settings";
+const Masters = lazy(() =>
+  import("./pages/settings/Masters")
+);
+
+const Configuration = lazy(() =>
+  import("./pages/settings/Configuration")
+);
 
 /* Authentication */
 
