@@ -1,4 +1,4 @@
-import { createCrudSlice } from "../../core/crud/createCrudSlice";
+import createCrudSlice from "../../core/crud/createCrudSlice";
 
 const reportsSlice = createCrudSlice({
 
