@@ -51,8 +51,10 @@ const MemberRegistration = lazy(() =>
   import("./pages/member/MemberRegistration")
 );
 
+
+
 const MemberProfile = lazy(() =>
-  import("./pages/member/MemberProfile")
+    import("./pages/member/profile/MemberProfile")
 );
 
 const MemberSearch = lazy(() =>
