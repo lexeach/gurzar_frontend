@@ -641,10 +641,5 @@ const activeFilters = Object.entries(
 /* ===========================================
     Action Settings
 =========================================== */
-const MasterList = ({
-
-    /* ===========================================
-        Action Settings
-    ============================================ */
 
 export default MasterList;
