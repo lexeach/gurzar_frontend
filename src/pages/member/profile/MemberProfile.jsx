@@ -13,7 +13,6 @@ import { useParams } from "react-router-dom";
 import ProfileHeader from "./ProfileHeader";
 import PersonalTab from "./PersonalTab";
 import AddressTab from "./AddressTab";
-import FamilyTab from "./FamilyTab";
 import HierarchyTab from "./HierarchyTab";
 import DocumentsTab from "./DocumentsTab";
 import TimelineTab from "./TimelineTab";

@@ -3,7 +3,7 @@ import {
   createAsyncThunk,
 } from "@reduxjs/toolkit";
 
-import villageService from "../../services/villageService";
+import villageService from "../../../services/villageService";
 
 /* ==========================================================
     Async Thunks

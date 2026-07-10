@@ -8,7 +8,7 @@ import reportReducer from "./slices/reportSlice";
 import documentReducer from "./slices/documentSlice";
 import notificationReducer from "./slices/notificationSlice";
 import settingsReducer from "./slices/settingsSlice";
-
+import tehsilReducer from "./slices/tehsilSlice";
 const store = configureStore({
   reducer: {
     auth: authReducer,

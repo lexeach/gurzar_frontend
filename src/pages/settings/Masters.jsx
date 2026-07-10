@@ -1,9 +1,18 @@
 import React from "react";
 
-import { MasterConfiguration } from "../system";
 
-export default function Masters() {
 
-return <MasterConfiguration />;
+
+export default function Roles() {
+
+    return (
+
+        <div>
+
+            MasterConfiguration Page
+
+        </div>
+
+    );
 
 }

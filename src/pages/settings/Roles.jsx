@@ -1,9 +1,19 @@
 import React from "react";
 
-import { RoleManagement } from "../system";
+
+
+
 
 export default function Roles() {
 
-return <RoleManagement />;
+    return (
+
+        <div>
+
+            Roles Page
+
+        </div>
+
+    );
 
 }

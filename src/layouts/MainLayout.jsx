@@ -1,104 +1,149 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Toolbar,
-  useMediaQuery,
-} from "@mui/material";
+
 import { Outlet } from "react-router-dom";
-import { useTheme } from "@mui/material/styles";
+
+import {
+
+    Box,
+
+    CssBaseline,
+
+    Toolbar,
+
+} from "@mui/material";
 
 import Header from "../components/layout/Header";
 import Sidebar from "../components/layout/Sidebar";
 import Footer from "../components/layout/Footer";
 import Breadcrumb from "../components/layout/Breadcrumb";
+import LoadingOverlay from "../components/common/LoadingOverlay";
 
-const DRAWER_WIDTH = 270;
+const DRAWER_WIDTH = 260;
 
 export default function MainLayout() {
 
-  const theme = useTheme();
+    const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const mobile = useMediaQuery(theme.breakpoints.down("lg"));
+    const [loading] = useState(false);
 
-  const [sidebarOpen, setSidebarOpen] = useState(!mobile);
+    const toggleSidebar = () => {
 
-  const handleDrawerToggle = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
+        setSidebarOpen((prev) => !prev);
 
-  return (
+    };
 
-    <Box
-      sx={{
-        display: "flex",
-        minHeight: "100vh",
-        background: "#F4F7FC",
-      }}
-    >
+    const closeSidebar = () => {
 
-      {/* Sidebar */}
+        setSidebarOpen(false);
 
-      <Sidebar
-        drawerWidth={DRAWER_WIDTH}
-        mobile={mobile}
-        open={sidebarOpen}
-        onClose={handleDrawerToggle}
-      />
+    };
 
-      {/* Main Content */}
+    return (
 
-      <Box
-        component="main"
-        sx={{
-          flexGrow: 1,
-          width: {
-            lg: `calc(100% - ${DRAWER_WIDTH}px)`,
-          },
-          display: "flex",
-          flexDirection: "column",
-          minHeight: "100vh",
-        }}
-      >
+        <Box sx={{ display: "flex", minHeight: "100vh" }}>
 
-        {/* Header */}
+            <CssBaseline />
 
-        <Header
-          mobile={mobile}
-          onMenuClick={handleDrawerToggle}
-        />
+            {/* ======================================================
+                HEADER
+            ======================================================= */}
 
-        {/* Prevent Header Overlay */}
+            <Header
 
-        <Toolbar />
+                title="Digital Organization Management System"
 
-        {/* Page Content */}
+                onMenuClick={toggleSidebar}
 
-        <Box
-          sx={{
-            flexGrow: 1,
-            p: 3,
-          }}
-        >
+                user={{
 
-          <Breadcrumb />
+                    name: "Administrator",
 
-          <Box
-            sx={{
-              mt: 2,
-            }}
-          >
-            <Outlet />
-          </Box>
+                }}
+
+            />
+
+            {/* ======================================================
+                SIDEBAR
+            ======================================================= */}
+
+            <Sidebar
+
+                open={sidebarOpen}
+
+                onClose={closeSidebar}
+
+                drawerWidth={DRAWER_WIDTH}
+
+            />
+
+            {/* ======================================================
+                PAGE
+            ======================================================= */}
+
+            <Box
+
+                component="main"
+
+                sx={{
+
+                    flexGrow: 1,
+
+                    display: "flex",
+
+                    flexDirection: "column",
+
+                    minHeight: "100vh",
+
+                    ml: {
+
+                        md: `${DRAWER_WIDTH}px`,
+
+                    },
+
+                    backgroundColor: "#f5f7fb",
+
+                }}
+
+            >
+
+                <Toolbar />
+
+                <Box
+
+                    sx={{
+
+                        flex: 1,
+
+                        p: 3,
+
+                    }}
+
+                >
+
+                    <Breadcrumb />
+
+                    <Outlet />
+
+                </Box>
+
+                <Footer />
+
+            </Box>
+
+            {/* ======================================================
+                GLOBAL LOADER
+            ======================================================= */}
+
+            <LoadingOverlay
+
+                open={loading}
+
+                message="Loading..."
+
+            />
 
         </Box>
 
-        {/* Footer */}
+    );
 
-        <Footer />
-
-      </Box>
-
-    </Box>
-
-  );
 }

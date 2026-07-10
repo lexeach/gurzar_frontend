@@ -10,7 +10,8 @@ import {
   CircularProgress,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import api from "../../services/axios";
+import api from "../../api";
+//import api from "../../api/client/apiClient";
 
 const OTP_LENGTH = 6;
 

@@ -4,9 +4,10 @@
    Central request executor for all CRUD services.
 ============================================================ */
 
-import apiClient from "../../services/api";
+import api from "../../api";
 import { normalizeError } from "./errorHandler";
 import { normalizeResponse } from "./responseHandler";
+//import api from "../../api";
 
 /* ============================================================
    DEFAULT CONFIG

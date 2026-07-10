@@ -11,7 +11,8 @@ import {
 import { Email } from "@mui/icons-material";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import api from "../../services/axios";
+import api from "../../api";
+//import api from "../../api/client/apiClient";
 
 export default function ForgotPassword() {
   const {
