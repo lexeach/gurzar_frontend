@@ -647,32 +647,4 @@ const MasterList = ({
         Action Settings
     ============================================ */
 
-    showActions = true,
-
-    showView = true,
-
-    showEdit = true,
-
-    showDelete = true,
-
-    showDuplicate = false,
-
-    showHistory = false,
-
-    customActions = [],
-
-}) => {
-
-    return (
-
-        <div>
-
-            MasterList Component
-
-        </div>
-
-    );
-
-};
-
 export default MasterList;
