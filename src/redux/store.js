@@ -12,12 +12,6 @@ import tehsilReducer from "./slices/tehsilSlice";
 
 import hierarchyCrudReducer from "./slices/hierarchyCrudSlice";
 
-export const store = configureStore({
-  reducer: {
-    hierarchy: hierarchyReducer,
-    hierarchyCrud: hierarchyCrudReducer,
-  },
-});
 
 const store = configureStore({
   reducer: {
